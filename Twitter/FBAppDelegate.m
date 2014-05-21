@@ -7,6 +7,9 @@
 //
 
 #import "FBAppDelegate.h"
+#import "FBHomeVC.h"
+#import "SWRevealViewController.h"
+#import "FBMenuVC.h"
 
 @implementation FBAppDelegate
 
@@ -15,6 +18,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    FBMenuVC *menuVC = [[FBMenuVC alloc] init];
+    FBHomeVC *homeVC = [[FBHomeVC alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    self.viewController = [[SWRevealViewController alloc] initWithRearViewController:menuVC
+                                                                 frontViewController:navController];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class SWRevealViewController;
+
 @interface FBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) SWRevealViewController *viewController;
 
 @end

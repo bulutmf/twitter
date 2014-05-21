@@ -19,6 +19,18 @@
 		3DAF0837192C042B0021F329 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF081F192C042B0021F329 /* UIKit.framework */; };
 		3DAF083F192C042B0021F329 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF083D192C042B0021F329 /* InfoPlist.strings */; };
 		3DAF0841192C042B0021F329 /* TwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0840192C042B0021F329 /* TwitterTests.m */; };
+		3DAF084D192CED620021F329 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF084C192CED620021F329 /* SWRevealViewController.m */; };
+		3DAF0854192CF1410021F329 /* FBHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0852192CF1410021F329 /* FBHomeVC.m */; };
+		3DAF0855192CF1410021F329 /* FBHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF0853192CF1410021F329 /* FBHomeVC.xib */; };
+		3DAF085A192CF20E0021F329 /* FBMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0858192CF20E0021F329 /* FBMenuVC.m */; };
+		3DAF085B192CF20E0021F329 /* FBMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF0859192CF20E0021F329 /* FBMenuVC.xib */; };
+		3DAF085F192CF6670021F329 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF085D192CF6670021F329 /* reveal-icon.png */; };
+		3DAF0860192CF6670021F329 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF085E192CF6670021F329 /* reveal-icon@2x.png */; };
+		3DAF0868192CFEA30021F329 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF0867192CFEA30021F329 /* Social.framework */; };
+		3DAF086C192D04E00021F329 /* FBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF086B192D04E00021F329 /* FBUtils.m */; };
+		3DAF0873192D0E720021F329 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0872192D0E720021F329 /* SVProgressHUD.m */; };
+		3DAF0875192D0F440021F329 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF0874192D0F440021F329 /* QuartzCore.framework */; };
+		3DAF0877192D0F720021F329 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,23 @@
 		3DAF083C192C042B0021F329 /* TwitterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwitterTests-Info.plist"; sourceTree = "<group>"; };
 		3DAF083E192C042B0021F329 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DAF0840192C042B0021F329 /* TwitterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterTests.m; sourceTree = "<group>"; };
+		3DAF084B192CED620021F329 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3DAF084C192CED620021F329 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3DAF0851192CF1410021F329 /* FBHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHomeVC.h; sourceTree = "<group>"; };
+		3DAF0852192CF1410021F329 /* FBHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHomeVC.m; sourceTree = "<group>"; };
+		3DAF0853192CF1410021F329 /* FBHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBHomeVC.xib; sourceTree = "<group>"; };
+		3DAF0857192CF20E0021F329 /* FBMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBMenuVC.h; sourceTree = "<group>"; };
+		3DAF0858192CF20E0021F329 /* FBMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMenuVC.m; sourceTree = "<group>"; };
+		3DAF0859192CF20E0021F329 /* FBMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBMenuVC.xib; sourceTree = "<group>"; };
+		3DAF085D192CF6670021F329 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		3DAF085E192CF6670021F329 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		3DAF0867192CFEA30021F329 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3DAF086A192D04E00021F329 /* FBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUtils.h; sourceTree = "<group>"; };
+		3DAF086B192D04E00021F329 /* FBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUtils.m; sourceTree = "<group>"; };
+		3DAF0871192D0E720021F329 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		3DAF0872192D0E720021F329 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		3DAF0874192D0F440021F329 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAF0875192D0F440021F329 /* QuartzCore.framework in Frameworks */,
+				3DAF0868192CFEA30021F329 /* Social.framework in Frameworks */,
 				3DAF081E192C042B0021F329 /* CoreGraphics.framework in Frameworks */,
 				3DAF0820192C042B0021F329 /* UIKit.framework in Frameworks */,
 				3DAF081C192C042B0021F329 /* Foundation.framework in Frameworks */,
@@ -96,6 +127,8 @@
 		3DAF081A192C042B0021F329 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF0874192D0F440021F329 /* QuartzCore.framework */,
+				3DAF0867192CFEA30021F329 /* Social.framework */,
 				3DAF081B192C042B0021F329 /* Foundation.framework */,
 				3DAF081D192C042B0021F329 /* CoreGraphics.framework */,
 				3DAF081F192C042B0021F329 /* UIKit.framework */,
@@ -107,6 +140,9 @@
 		3DAF0821192C042B0021F329 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF084F192CF1120021F329 /* MainView */,
+				3DAF085C192CF65A0021F329 /* Images */,
+				3DAF084E192CED660021F329 /* ExternalLibraries */,
 				3DAF082A192C042B0021F329 /* FBAppDelegate.h */,
 				3DAF082B192C042B0021F329 /* FBAppDelegate.m */,
 				3DAF082D192C042B0021F329 /* Images.xcassets */,
@@ -142,6 +178,82 @@
 				3DAF083D192C042B0021F329 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DAF084A192CED490021F329 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF084B192CED620021F329 /* SWRevealViewController.h */,
+				3DAF084C192CED620021F329 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		3DAF084E192CED660021F329 /* ExternalLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF086D192D09D20021F329 /* SVProgressHud */,
+				3DAF084A192CED490021F329 /* SWRevealViewController */,
+			);
+			name = ExternalLibraries;
+			sourceTree = "<group>";
+		};
+		3DAF084F192CF1120021F329 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF0869192D04CA0021F329 /* Utils */,
+				3DAF0856192CF1F50021F329 /* MenuView */,
+				3DAF0850192CF11D0021F329 /* HomeVC */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		3DAF0850192CF11D0021F329 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF0851192CF1410021F329 /* FBHomeVC.h */,
+				3DAF0852192CF1410021F329 /* FBHomeVC.m */,
+				3DAF0853192CF1410021F329 /* FBHomeVC.xib */,
+			);
+			name = HomeVC;
+			sourceTree = "<group>";
+		};
+		3DAF0856192CF1F50021F329 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF0857192CF20E0021F329 /* FBMenuVC.h */,
+				3DAF0858192CF20E0021F329 /* FBMenuVC.m */,
+				3DAF0859192CF20E0021F329 /* FBMenuVC.xib */,
+			);
+			name = MenuView;
+			sourceTree = "<group>";
+		};
+		3DAF085C192CF65A0021F329 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */,
+				3DAF085D192CF6670021F329 /* reveal-icon.png */,
+				3DAF085E192CF6670021F329 /* reveal-icon@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		3DAF0869192D04CA0021F329 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF086A192D04E00021F329 /* FBUtils.h */,
+				3DAF086B192D04E00021F329 /* FBUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3DAF086D192D09D20021F329 /* SVProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF0871192D0E720021F329 /* SVProgressHUD.h */,
+				3DAF0872192D0E720021F329 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHud;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +333,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAF0826192C042B0021F329 /* InfoPlist.strings in Resources */,
+				3DAF0855192CF1410021F329 /* FBHomeVC.xib in Resources */,
+				3DAF0860192CF6670021F329 /* reveal-icon@2x.png in Resources */,
+				3DAF0877192D0F720021F329 /* SVProgressHUD.bundle in Resources */,
 				3DAF082E192C042B0021F329 /* Images.xcassets in Resources */,
+				3DAF085B192CF20E0021F329 /* FBMenuVC.xib in Resources */,
+				3DAF085F192CF6670021F329 /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +358,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAF082C192C042B0021F329 /* FBAppDelegate.m in Sources */,
+				3DAF0873192D0E720021F329 /* SVProgressHUD.m in Sources */,
+				3DAF085A192CF20E0021F329 /* FBMenuVC.m in Sources */,
 				3DAF0828192C042B0021F329 /* main.m in Sources */,
+				3DAF084D192CED620021F329 /* SWRevealViewController.m in Sources */,
+				3DAF0854192CF1410021F329 /* FBHomeVC.m in Sources */,
+				3DAF086C192D04E00021F329 /* FBUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
