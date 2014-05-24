@@ -12,5 +12,6 @@
 
 + (void) executeAsyncBlock:(void (^)(void (^completionBlock)(void))) blockToExecute;
 + (void) showPopupMessageInView:(UIViewController *) viewController title:(NSString *) title message:(NSString *) msg;
++ (BOOL) checkAuthorization:(UIViewController *) viewController;
 
 @end

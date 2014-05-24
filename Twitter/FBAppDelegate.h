@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) SWRevealViewController *viewController;
+@property (strong, nonatomic) NSDictionary *accountOwner;// Info about the user
 
 @end

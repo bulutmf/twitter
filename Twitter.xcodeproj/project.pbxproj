@@ -31,6 +31,7 @@
 		3DAF0873192D0E720021F329 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0872192D0E720021F329 /* SVProgressHUD.m */; };
 		3DAF0875192D0F440021F329 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF0874192D0F440021F329 /* QuartzCore.framework */; };
 		3DAF0877192D0F720021F329 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */; };
+		3DAF088419300A7E0021F329 /* FBProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF088319300A7E0021F329 /* FBProfileCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		3DAF0872192D0E720021F329 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		3DAF0874192D0F440021F329 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		3DAF088219300A7E0021F329 /* FBProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProfileCell.h; sourceTree = "<group>"; };
+		3DAF088319300A7E0021F329 /* FBProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProfileCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 		3DAF0821192C042B0021F329 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF0878193003C10021F329 /* Objects */,
 				3DAF084F192CF1120021F329 /* MainView */,
 				3DAF085C192CF65A0021F329 /* Images */,
 				3DAF084E192CED660021F329 /* ExternalLibraries */,
@@ -221,6 +225,7 @@
 		3DAF0856192CF1F50021F329 /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF08791930053C0021F329 /* ProfileCell */,
 				3DAF0857192CF20E0021F329 /* FBMenuVC.h */,
 				3DAF0858192CF20E0021F329 /* FBMenuVC.m */,
 				3DAF0859192CF20E0021F329 /* FBMenuVC.xib */,
@@ -254,6 +259,22 @@
 				3DAF0872192D0E720021F329 /* SVProgressHUD.m */,
 			);
 			name = SVProgressHud;
+			sourceTree = "<group>";
+		};
+		3DAF0878193003C10021F329 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		3DAF08791930053C0021F329 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF088219300A7E0021F329 /* FBProfileCell.h */,
+				3DAF088319300A7E0021F329 /* FBProfileCell.m */,
+			);
+			name = ProfileCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +381,7 @@
 				3DAF082C192C042B0021F329 /* FBAppDelegate.m in Sources */,
 				3DAF0873192D0E720021F329 /* SVProgressHUD.m in Sources */,
 				3DAF085A192CF20E0021F329 /* FBMenuVC.m in Sources */,
+				3DAF088419300A7E0021F329 /* FBProfileCell.m in Sources */,
 				3DAF0828192C042B0021F329 /* main.m in Sources */,
 				3DAF084D192CED620021F329 /* SWRevealViewController.m in Sources */,
 				3DAF0854192CF1410021F329 /* FBHomeVC.m in Sources */,

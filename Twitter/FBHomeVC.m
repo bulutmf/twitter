@@ -8,7 +8,6 @@
 
 #import "FBHomeVC.h"
 #import "SWRevealViewController.h"
-#import "FBLoginVC.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 #import "FBUtils.h"
@@ -48,15 +47,23 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if ([self isTwitterAvailable]) {
-        NSLog(@"Twitter is available and there exists at least one user account");
+    
+    [self performSelector:@selector(checkTwitterAuthorization) withObject:nil afterDelay:0.2];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) checkTwitterAuthorization {
+    if ([FBUtils checkAuthorization:self]) {
+        NSLog(@"Twitter is available and authorized to use");
         
         // Now get timeline of the user
         [self getTimeLine];
         
-    } else {
-        NSLog(@"No account added yet! Please add first");
-        [FBUtils showPopupMessageInView:self title:@"" message:@"Please add Twitter account from Settings!"];
     }
 }
 
@@ -69,29 +76,7 @@
     [SVProgressHUD showWithStatus:@"Getting timeline..."];
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
-        
-        if (error == nil) {
-            if (granted) {
-                NSLog(@"Granted");
-                // Go get the status updates
-                [self performRequestToGetTimelineWithAccountStore:accountStore accountType:accountType];
-                
-            } else {
-                NSLog(@"Please authenticate our app!");
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [SVProgressHUD dismiss];
-                    [FBUtils showPopupMessageInView:self title:@"" message:@"Please authenticate the app from Settings!"];
-                });
-            }
-        } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-                [FBUtils showPopupMessageInView:self title:@"" message:[error description]];
-            });
-        }
-        
-    }];
+    [self performRequestToGetTimelineWithAccountStore:accountStore accountType:accountType];
 }
 
 - (void) performRequestToGetTimelineWithAccountStore:(ACAccountStore *) accountStore accountType:(ACAccountType *) accountType {
@@ -108,36 +93,31 @@
     //  Attach an account to the request
     [request setAccount:account];
     [request performRequestWithHandler: ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-         if (responseData) {
-             if (urlResponse.statusCode >= 200 && urlResponse.statusCode < 300) {
-                 NSError *jsonError;
-                 NSDictionary *timelineData = [NSJSONSerialization JSONObjectWithData:responseData
-                                                                              options:NSJSONReadingAllowFragments
-                                                                                error:&jsonError];
-                 if (timelineData) {
-                     NSLog(@"Timeline Response: %@\n", timelineData);
-                 } else {
-                     // Our JSON deserialization went awry
-                     NSLog(@"JSON Error: %@", [jsonError localizedDescription]);
-                 }
-                 dispatch_async(dispatch_get_main_queue(), ^{
-                     [SVProgressHUD dismiss];
-                 });
-             } else {
-                 // The server did not respond ... were we rate-limited?
-                 NSLog(@"The response status code is %ld", (long) urlResponse.statusCode);
-                 dispatch_async(dispatch_get_main_queue(), ^{
-                     [SVProgressHUD dismiss];
-                 });
-             }
-         }
-     }];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+        if (responseData) {
+            if (urlResponse.statusCode >= 200 && urlResponse.statusCode < 300) {
+                NSError *jsonError;
+                NSDictionary *timelineData = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                             options:NSJSONReadingAllowFragments
+                                                                               error:&jsonError];
+                if (timelineData) {
+                    //NSLog(@"Timeline Response: %@\n", timelineData);
+                    
+                } else {
+                    // Our JSON deserialization went awry
+                    NSLog(@"JSON Error: %@", [jsonError localizedDescription]);
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                });
+            } else {
+                // The server did not respond ... were we rate-limited?
+                NSLog(@"The response status code is %ld", (long) urlResponse.statusCode);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                });
+            }
+        }
+    }];
 }
 
 @end
