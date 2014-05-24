@@ -52,7 +52,7 @@
     
     self.cache = [[NSCache alloc] init];
     self.opQueue = [[NSOperationQueue alloc] init];
-    self.opQueue.maxConcurrentOperationCount = 3;
+    self.opQueue.maxConcurrentOperationCount = 10;
     
 }
 

@@ -16,7 +16,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentView.backgroundColor = [UIColor grayColor];
+        self.contentView.backgroundColor = [UIColor lightGrayColor];
         //CGRect contentFrame = self.contentView.frame;
         float imageSize = 50;
         
