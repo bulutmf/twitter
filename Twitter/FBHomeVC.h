@@ -10,4 +10,6 @@
 
 @interface FBHomeVC : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end

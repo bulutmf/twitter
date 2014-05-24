@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1D837C1930EFA2006A97A7 /* FBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D837B1930EFA2006A97A7 /* FBConstants.m */; };
+		3D1D83801930F031006A97A7 /* UIFont+Twitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D837F1930F031006A97A7 /* UIFont+Twitter.m */; };
 		3DAF081C192C042B0021F329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF081B192C042B0021F329 /* Foundation.framework */; };
 		3DAF081E192C042B0021F329 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF081D192C042B0021F329 /* CoreGraphics.framework */; };
 		3DAF0820192C042B0021F329 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF081F192C042B0021F329 /* UIKit.framework */; };
@@ -32,6 +34,7 @@
 		3DAF0875192D0F440021F329 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAF0874192D0F440021F329 /* QuartzCore.framework */; };
 		3DAF0877192D0F720021F329 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */; };
 		3DAF088419300A7E0021F329 /* FBProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF088319300A7E0021F329 /* FBProfileCell.m */; };
+		3DD4E15F1930FBC2000B68CB /* FBStatusUpdateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4E15E1930FBC2000B68CB /* FBStatusUpdateCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1D837A1930EFA2006A97A7 /* FBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConstants.h; sourceTree = "<group>"; };
+		3D1D837B1930EFA2006A97A7 /* FBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBConstants.m; sourceTree = "<group>"; };
+		3D1D837E1930F031006A97A7 /* UIFont+Twitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Twitter.h"; sourceTree = "<group>"; };
+		3D1D837F1930F031006A97A7 /* UIFont+Twitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Twitter.m"; sourceTree = "<group>"; };
 		3DAF0818192C042B0021F329 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAF081B192C042B0021F329 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DAF081D192C042B0021F329 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +87,8 @@
 		3DAF0876192D0F720021F329 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		3DAF088219300A7E0021F329 /* FBProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProfileCell.h; sourceTree = "<group>"; };
 		3DAF088319300A7E0021F329 /* FBProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProfileCell.m; sourceTree = "<group>"; };
+		3DD4E15D1930FBC2000B68CB /* FBStatusUpdateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBStatusUpdateCell.h; sourceTree = "<group>"; };
+		3DD4E15E1930FBC2000B68CB /* FBStatusUpdateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBStatusUpdateCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1D837D1930F008006A97A7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3D1D837E1930F031006A97A7 /* UIFont+Twitter.h */,
+				3D1D837F1930F031006A97A7 /* UIFont+Twitter.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		3DAF080F192C042B0021F329 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +161,8 @@
 		3DAF0821192C042B0021F329 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				3DAF0878193003C10021F329 /* Objects */,
+				3D1D837D1930F008006A97A7 /* Categories */,
+				3DAF0878193003C10021F329 /* Constants */,
 				3DAF084F192CF1120021F329 /* MainView */,
 				3DAF085C192CF65A0021F329 /* Images */,
 				3DAF084E192CED660021F329 /* ExternalLibraries */,
@@ -215,6 +234,7 @@
 		3DAF0850192CF11D0021F329 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				3DD4E15C1930FB94000B68CB /* StatusUpdateCell */,
 				3DAF0851192CF1410021F329 /* FBHomeVC.h */,
 				3DAF0852192CF1410021F329 /* FBHomeVC.m */,
 				3DAF0853192CF1410021F329 /* FBHomeVC.xib */,
@@ -261,11 +281,13 @@
 			name = SVProgressHud;
 			sourceTree = "<group>";
 		};
-		3DAF0878193003C10021F329 /* Objects */ = {
+		3DAF0878193003C10021F329 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				3D1D837A1930EFA2006A97A7 /* FBConstants.h */,
+				3D1D837B1930EFA2006A97A7 /* FBConstants.m */,
 			);
-			name = Objects;
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		3DAF08791930053C0021F329 /* ProfileCell */ = {
@@ -275,6 +297,15 @@
 				3DAF088319300A7E0021F329 /* FBProfileCell.m */,
 			);
 			name = ProfileCell;
+			sourceTree = "<group>";
+		};
+		3DD4E15C1930FB94000B68CB /* StatusUpdateCell */ = {
+			isa = PBXGroup;
+			children = (
+				3DD4E15D1930FBC2000B68CB /* FBStatusUpdateCell.h */,
+				3DD4E15E1930FBC2000B68CB /* FBStatusUpdateCell.m */,
+			);
+			name = StatusUpdateCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,8 +412,11 @@
 				3DAF082C192C042B0021F329 /* FBAppDelegate.m in Sources */,
 				3DAF0873192D0E720021F329 /* SVProgressHUD.m in Sources */,
 				3DAF085A192CF20E0021F329 /* FBMenuVC.m in Sources */,
+				3DD4E15F1930FBC2000B68CB /* FBStatusUpdateCell.m in Sources */,
+				3D1D837C1930EFA2006A97A7 /* FBConstants.m in Sources */,
 				3DAF088419300A7E0021F329 /* FBProfileCell.m in Sources */,
 				3DAF0828192C042B0021F329 /* main.m in Sources */,
+				3D1D83801930F031006A97A7 /* UIFont+Twitter.m in Sources */,
 				3DAF084D192CED620021F329 /* SWRevealViewController.m in Sources */,
 				3DAF0854192CF1410021F329 /* FBHomeVC.m in Sources */,
 				3DAF086C192D04E00021F329 /* FBUtils.m in Sources */,
@@ -582,6 +616,7 @@
 				3DAF0846192C042B0021F329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DAF0847192C042B0021F329 /* Build configuration list for PBXNativeTarget "TwitterTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +625,7 @@
 				3DAF0849192C042B0021F329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,6 +15,7 @@
 #import "FBUtils.h"
 #import "FBAppDelegate.h"
 #import "FBProfileCell.h"
+#import "UIFont+Twitter.h"
 
 @interface FBMenuVC ()
 
@@ -70,13 +71,14 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         
-        ((FBProfileCell *)cell).profileImageView.image = [UIImage imageWithData:
-                                [NSData dataWithContentsOfURL:
-                                 [NSURL URLWithString:
-                                  [self.accountOwner objectForKey:@"profile_image_url"]
-                                  ]
-                                 ]
-                                ];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSURL *url = [NSURL URLWithString:[self.accountOwner objectForKey:@"profile_image_url"]];
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [((FBProfileCell *)cell).actIndicator stopAnimating];
+                ((FBProfileCell *)cell).profileImageView.image = [UIImage imageWithData:data];
+            });
+        });
         
         ((FBProfileCell *)cell).nameLabel.text = [self.accountOwner objectForKey:@"name"];
         ((FBProfileCell *)cell).bioLabel.text = [self.accountOwner objectForKey:@"description"];

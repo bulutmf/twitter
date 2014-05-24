@@ -8,6 +8,7 @@
 
 #import "FBProfileCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIFont+Twitter.h"
 
 @implementation FBProfileCell
 
@@ -25,6 +26,7 @@
         [self.contentView addSubview:self.profileImageView];
         
         self.nameLabel = [[UILabel alloc] init];
+        self.nameLabel.font = [UIFont t_regularPostFont];
         //self.nameLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:self.nameLabel];
         
@@ -34,9 +36,15 @@
         self.bioLabel.font = [UIFont italicSystemFontOfSize:11];
         [self.contentView addSubview:self.bioLabel];
         
+        self.actIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [self.actIndicator startAnimating];
+        [self.contentView addSubview:self.actIndicator];
+        
+        
         self.profileImageView.translatesAutoresizingMaskIntoConstraints = NO;
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
         self.bioLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        self.actIndicator.translatesAutoresizingMaskIntoConstraints = NO;
         
         // Lets do it with auto layout
         NSLayoutConstraint *imageViewConstraint = [NSLayoutConstraint constraintWithItem:self.profileImageView
@@ -124,6 +132,21 @@
                                                                                    attribute:NSLayoutAttributeNotAnAttribute
                                                                                   multiplier:1
                                                                                     constant:30];
+        NSLayoutConstraint *actIndX = [NSLayoutConstraint constraintWithItem:self.actIndicator
+                                                                  attribute:NSLayoutAttributeCenterX
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.profileImageView
+                                                                  attribute:NSLayoutAttributeCenterX
+                                                                 multiplier:1
+                                                                   constant:0];
+        NSLayoutConstraint *actIndY = [NSLayoutConstraint constraintWithItem:self.actIndicator
+                                                                  attribute:NSLayoutAttributeCenterY
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.profileImageView
+                                                                  attribute:NSLayoutAttributeCenterY
+                                                                 multiplier:1
+                                                                   constant:0];
+        
         
         [self.contentView addConstraints:@[imageViewConstraint,
                                            imageViewConstraintTop,
@@ -136,7 +159,9 @@
                                            bioLabelConstraint,
                                            bioLabelConstraintTop,
                                            bioLabelWidthConstraint,
-                                           bioLabelHeightConstraint]];
+                                           bioLabelHeightConstraint,
+                                           actIndX,
+                                           actIndY]];
     }
     
     return self;
